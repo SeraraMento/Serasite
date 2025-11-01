@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Séraphine Lamento — Vidéos</title>
+  <link rel="stylesheet" href="style.css"> <!-- Ton CSS existant -->
+  <link rel="icon" type="image/png" href="avatar.png" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="Avatar.html">Avatar</a>
+    <a href="planning.html">Planning</a>
+  </nav>
+
+
+  <div class="app">
+
+    <!-- Carte profil -->
+    <div class="profile-card">
+      <div class="avatar">
+        <img src="avatar.png" alt="Avatar Séraphine" style="width:100%; height:100%;">
+      </div>
+      <div class="profile-name">Séraphine Lamento</div>
+      <div class="profile-tag">VTubeuse & Freelance VRChat</div>
+    </div>
+
+    <!-- Main panel pour les vidéos -->
+    <div class="main-panel">
+      <h2 class="h-title">Mes vidéos</h2>
+      <div class="h-sub">Clique sur une vidéo pour la visionner</div>
+
+      <!-- Carte vidéo -->
+      <div class="card">
+        <h3>— Full Cover devil is disguise</h3>
+        <video controls width="100%" poster="poster1.jpg">
+          <source src="full cover.mp4" type="video/mp4">
+          Ton navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+
+      <div class="card">
+        <h3>— 1_800 Cover</h3>
+        <video controls width="100%" poster="poster1.jpg">
+          <source src="1-800 Cover.mp4" type="video/mp4">
+          Ton navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+
+      <div class="card">
+        <h3>— Fighting birdess</h3>
+        <video controls width="100%" poster="poster1.jpg">
+          <source src="fightning birdess.mp4" type="video/mp4">
+          Ton navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="credits">
+    © 2025 Séraphine Lamento
+  </div>
+
+  <script>
+    for (let i = 0; i < 60; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${1 + Math.random() * 3}s`;
+      document.body.appendChild(star);
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `
+      .star {
+        position: fixed;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: twinkleStar 2s infinite ease-in-out;
+        z-index: 0;
+      }
+      @keyframes twinkleStar {
+        0%,100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+
+</html>
